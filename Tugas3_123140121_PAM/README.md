@@ -42,4 +42,4 @@ Aplikasi ini menggunakan tema Material 3 untuk tampilan yang modern dan responsi
 "Design is not just what it looks like and feels like. Design is how it works." — Steve Jobs
 
 Dokumentasi Program
-
+<img src="Screenshot 2026-03-14 055004" width="300" alt="Screenshot App">
