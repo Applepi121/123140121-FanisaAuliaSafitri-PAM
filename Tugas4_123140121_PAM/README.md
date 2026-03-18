@@ -1,4 +1,4 @@
-<img width="372" height="779" alt="image" src="https://github.com/user-attachments/assets/cdde9b97-5025-4a9f-b47f-a9aeca5af577" />Tugas 4 Pengembangan Aplikasi Mobile
+Tugas 4 Pengembangan Aplikasi Mobile
 
 Nama: Fanisa Aulia Safitri
 NIM: 123140121
@@ -30,8 +30,11 @@ Proyek ini adalah pengembangan aplikasi profil mahasiswa dengan menerapkan pola 
 
 4. Dokumentasi
    - Profile View (Mode Terang): Tampilan awal profil.
-     <img width="366" height="774" alt="image" src="https://github.com/user-attachments/assets/ec9a2389-67af-4209-8110-288cdfa6baea" />
+     <img width="382" height="788" alt="image" src="https://github.com/user-attachments/assets/4a10d11e-4118-4bbb-99e2-f758d7dcc9b5" />
+
      - Edit Feature: Proses mengubah data melalui TextField.
-       <img width="373" height="783" alt="image" src="https://github.com/user-attachments/assets/cebc2bcb-3458-4d64-a41e-6364c23fc17a" />
+       <img width="418" height="801" alt="image" src="https://github.com/user-attachments/assets/84bcc8e6-5527-4f1f-a2ee-f35906f7da93" />
+
      - Dark Mode: Tampilan aplikasi saat tema gelap aktif.
-       <img width="373" height="783" alt="image" src="https://github.com/user-attachments/assets/a16afa65-d9bf-4b1b-9492-f0df084edd50" />
+       <img width="372" height="779" alt="image" src="https://github.com/user-attachments/assets/71d16c19-ce8f-4dab-a338-9dc650825341" />
+
