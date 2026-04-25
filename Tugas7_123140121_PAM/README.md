@@ -1,35 +1,44 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+**Tugas Individu 7 Pengembangan Aplikasi Mobile**
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+Nama: Fanisa Aulia Safitri
+NIM: 123140121
+Kelas: RB
 
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+UpgradeNote adalah aplikasi manajemen catatan berbasis Kotlin Multiplatform (KMP) yang dirancang untuk performa tinggi dengan fitur offline-first. Aplikasi ini mengusung desain yang personal dengan estetika Maroon & Girly, mencerminkan identitas pengembangnya sebagai mahasiswi Teknik Informatika.
 
-### Build and Run Android Application
+**Fitur Utama:**
+- Manajemen Catatan (CRUD): Tambah, edit, dan hapus catatan dengan mudah.
+- Pencarian Real-time: Fitur pencarian reaktif menggunakan Coroutines Debounce (300ms).
+- Offline Storage: Menggunakan SQLDelight untuk database lokal yang handal.
+- Pengaturan Tema: Mendukung tiga tema utama: Maroon, Pink (Girly), dan Black (Dark Mode).
+- Sort Order: Urutkan catatan berdasarkan waktu terbaru atau terlama secara dinamis.
+- Profil Akademik: Halaman profil yang menampilkan identitas mahasiswa ITERA, lengkap dengan fitur edit Nama dan NIM.
 
-To build and run the development version of the Android app, use the run configuration from the run widget
-in your IDE’s toolbar or build it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:assembleDebug
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:assembleDebug
-  ```
+**Tech Stack:**
+- Language: Kotlin
+- Framework UI: Compose Multiplatform (Material 3)
+- Database: SQLDelight
+- Local Settings: Multiplatform Settings
+- Architecture: MVVM (Model-View-ViewModel)
+- Concurrency: Kotlin Coroutines & Flow
 
-### Build and Run iOS Application
+**Tampilan Aplikasi:**
+Daftar Catatan:
+<img width="808" height="855" alt="image" src="https://github.com/user-attachments/assets/03e77f7d-f9e0-4b07-bd93-09e84deb9bf9" />
 
-To build and run the development version of the iOS app, use the run configuration from the run widget
-in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
 
----
+Detail Catatan:
+<img width="816" height="835" alt="image" src="https://github.com/user-attachments/assets/13d4dec7-1c93-4af0-a4f1-87b94c41aa99" />
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+
+Profil Mahasiswa
+<img width="781" height="822" alt="image" src="https://github.com/user-attachments/assets/b851a1f7-6274-4384-8ff3-afde6d32a767" />
+
+
+**Cara Menjalankan Proyek:**
+1. Clone Repository
+2. Generate Database Classes
+3. Generate Resources
+4. Run Application
+
+Link youtube: https://youtube.com/shorts/xMFwBXr33Vc?feature=share 
