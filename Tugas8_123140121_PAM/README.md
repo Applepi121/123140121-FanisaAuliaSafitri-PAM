@@ -1,35 +1,44 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+**UpgradeNote - Kotlin Multiplatform (Tugas Minggu 8)**
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+Nama: Fanisa Aulia Safitri
+NIM: 123140121
+Kelas: RB
 
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+pgradeNote adalah aplikasi manajemen catatan berbasis Kotlin Multiplatform (KMP) yang dirancang untuk mendemonstrasikan implementasi fitur spesifik platform, manajemen dependensi, dan arsitektur aplikasi yang bersih.
 
-### Build and Run Android Application
+**Fitur Utama**
+Aplikasi ini mengimplementasikan:
+1. Koin Dependency Injection (DI)
+2. Device Information (Expect/Actual)
+3. Network Status Monitoring
 
-To build and run the development version of the Android app, use the run configuration from the run widget
-in your IDE’s toolbar or build it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:assembleDebug
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:assembleDebug
-  ```
+**Tech Stack**
+Language: Kotlin
+UI Framework: Compose Multiplatform
+Dependency Injection: Koin
+Local Storage: SQLDelight / Multiplatform Settings
+Navigation: Navigation Compose Stack
+Architecture: MVVM (Model-View-ViewModel)
 
-### Build and Run iOS Application
+**Struktur Proyek**
+Plaintext
+composeApp/
+├── src/
+│   ├── commonMain/         # Logika bisnis, UI Utama, dan Expect DI
+│   │   └── kotlin/di/      # AppModule.kt (Expect platformModule)
+│   ├── androidMain/        # Implementasi native Android dan Actual DI
+│   │   ├── kotlin/di/      # PlatformModule.android.kt
+│   │   └── AndroidManifest # Izin ACCESS_NETWORK_STATE
+│   └── iosMain/            # Implementasi native iOS
 
-To build and run the development version of the iOS app, use the run configuration from the run widget
-in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
+**Identitas Visual**
+Aplikasi ini menggunakan tema warna Maroon dan Black sebagai identitas utama proyek UpgradeNote, memberikan tampilan yang elegan dan tegas sesuai preferensi desain pengembang.
 
----
+Link Video Demo: https://youtu.be/PReIaDReT-I?si=NMzr9kuJKVXzTdMv
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+Dokumentasi:
+Tampilan info aplikasi
+<img width="834" height="766" alt="image" src="https://github.com/user-attachments/assets/191ea978-8851-49b1-8bf0-c479a476a197" />
+
+Tampilan jika offline
+<img width="850" height="756" alt="image" src="https://github.com/user-attachments/assets/7ceb912b-7c20-44d8-a013-c0fbbcfcf20f" />
