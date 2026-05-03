@@ -81,12 +81,10 @@ composeApp/src/
 
 Prompt dirancang dengan pola **Role + Task + Format + Constraint**:
 
-```
 [ROLE]   "You are a professional nutritionist with 10 years of experience."
 [TASK]   "Analisis kandungan gizi: {foodName} ({amount} {unit})"
 [FORMAT] Struktur JSON ketat dengan semua field wajib
 [CONSTRAINT] "Respond ONLY with valid JSON. No markdown, no backticks."
-```
 
 Mendukung deteksi makanan dari semua bahasa dan selalu mengembalikan hasil dalam Bahasa Indonesia.
 
