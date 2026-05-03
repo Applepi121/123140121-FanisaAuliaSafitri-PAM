@@ -1,0 +1,52 @@
+-- Tabel untuk menyimpan catatan [cite: 204]
+CREATE TABLE NoteEntity (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    created_at INTEGER NOT NULL,
+    updated_at INTEGER NOT NULL,
+    is_synced INTEGER NOT NULL DEFAULT 0
+);
+
+-- Query untuk mengambil semua catatan [cite: 212, 213]
+selectAll:
+SELECT * FROM NoteEntity ORDER BY updated_at DESC;
+
+-- Query untuk mengambil catatan berdasarkan ID [cite: 215, 216]
+selectById:
+SELECT * FROM NoteEntity WHERE id = ?;
+
+-- Query untuk fitur SEARCH (Bobot 15% di rubrik) [cite: 230, 527]
+search:
+SELECT * FROM NoteEntity
+WHERE title LIKE ('%' || ? || '%')
+OR content LIKE ('%' || ? || '%');
+
+-- Operasi CRUD: Insert [cite: 218-221]
+insert:
+INSERT INTO NoteEntity(title, content, created_at, updated_at, is_synced)
+VALUES (?, ?, ?, ?, ?);
+
+-- Operasi CRUD: Update [cite: 223, 224]
+update:
+UPDATE NoteEntity
+SET title = ?, content = ?, updated_at = ?
+WHERE id = ?;
+
+-- Update status sinkronisasi untuk offline-first
+updateSyncStatus:
+UPDATE NoteEntity SET is_synced = ? WHERE id = ?;
+
+-- Operasi CRUD: Delete [cite: 226, 227]
+delete:
+DELETE FROM NoteEntity WHERE id = ?;
+
+-- Query pendukung [cite: 574]
+countNotes:
+SELECT count(*) AS count FROM NoteEntity;
+
+getPendingSync:
+SELECT * FROM NoteEntity WHERE is_synced = 0;
+
+deleteAll:
+DELETE FROM NoteEntity;
